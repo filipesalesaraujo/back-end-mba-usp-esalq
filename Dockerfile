@@ -7,8 +7,6 @@ WORKDIR /app
 # Copie todos os seus arquivos Python para o contêiner
 COPY . /app
 
-# Instale as dependências da aplicação, se houver um requirements.txt
-# RUN pip install -r requirements.txt
-
-# Comando para rodar a aplicação
-CMD ["python", "main.py"]
+# Instale as dependências da aplicação
+RUN pip install colorama
+RUN pip install requests
